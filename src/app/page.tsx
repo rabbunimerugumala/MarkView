@@ -1,58 +1,25 @@
 "use client";
 
 import { useState } from "react";
-import { MarkdownEditor } from "@/components/markdown-editor";
-import { MarkdownPreview } from "@/components/markdown-preview";
-import { ThemeToggle } from "@/components/theme-toggle";
-
-const defaultMarkdown = `# Welcome to MarkView!
-
-This is a live Markdown viewer. Start typing in the editor on the left, and you'll see the rendered HTML on the right.
-
-## Features
-
-- **Live Preview:** Updates as you type.
-- **GitHub Flavored Markdown:** Uses \`remark-gfm\` for tables, strikethrough, and more.
-- **Dark/Light Mode:** Toggle the theme in the top right.
-
-### Code Blocks
-
-\`\`\`javascript
-import React from 'react';
-
-const MyComponent = () => {
-  return <div>Hello, World!</div>;
-}
-
-export default MyComponent;
-\`\`\`
-
-Check out the [react-markdown](https://github.com/remarkjs/react-markdown) library that powers this preview.
-`;
+import { MarkdownEditor } from "@/components/MarkdownEditor";
+import { MarkdownPreview } from "@/components/MarkdownPreview";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export default function Home() {
-  const [markdown, setMarkdown] = useState<string>(defaultMarkdown);
+  const [markdown, setMarkdown] = useState<string>("# Welcome to MarkView\n\nStart typing...");
 
   return (
-    <div className="flex h-screen flex-col">
-      <header className="sticky top-0 z-10 flex h-14 shrink-0 items-center justify-between border-b bg-background px-4 sm:px-6">
-        <h1 className="text-xl font-bold font-headline">MarkView</h1>
+    <div className="flex flex-col h-screen">
+      <header className="flex items-center justify-between px-6 py-4 border-b">
+        <h1 className="text-xl font-bold">MarkView</h1>
         <ThemeToggle />
       </header>
-
-      <main className="flex flex-1 flex-col md:flex-row">
-        <div className="relative flex h-1/2 w-full flex-col md:h-full md:w-1/2">
-          <MarkdownEditor markdown={markdown} setMarkdown={setMarkdown} />
+      <main className="flex-1 flex overflow-hidden">
+        <div className="w-1/2 border-r flex flex-col">
+          <MarkdownEditor value={markdown} onChange={setMarkdown} />
         </div>
-        
-        {/* Mobile separator */}
-        <div className="h-[1px] w-full bg-border md:hidden" />
-        
-        {/* Desktop separator */}
-        <div className="hidden w-[1px] bg-border md:block" />
-
-        <div className="relative flex h-1/2 w-full flex-col md:h-full md:w-1/2">
-          <MarkdownPreview markdown={markdown} />
+        <div className="w-1/2 flex flex-col bg-gray-50 dark:bg-zinc-900/50">
+          <MarkdownPreview content={markdown} />
         </div>
       </main>
     </div>
