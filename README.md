@@ -3,8 +3,7 @@
 🔥 **Live split-screen Markdown Viewer & Editor** with instant preview, dark/light mode glows, buttery smooth animations, and full GitHub Flavored Markdown support for perfect docs.
 
 ## ✨ Live Demo
-![MarkView Demo](public/demo.gif)
-*(Replace with your demo GIF - record screen while typing markdown)*
+![MarkView App](public/screenshots/image.png)
 
 ## 🚀 Features
 
@@ -38,9 +37,7 @@ npm run dev
 
 ## 📱 Screenshots
 
-| Desktop Split-Screen | Mobile Stacked View | Dark Mode Glow |
-| :---: | :---: | :---: |
-| ![Desktop](public/screenshots/desktop.png) | ![Mobile](public/screenshots/mobile.png) | ![Dark Mode](public/screenshots/dark.png) |
+![MarkView App](public/screenshots/image.png)
 
 ## 📁 Clean Structure
 
