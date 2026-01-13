@@ -2,8 +2,8 @@
 
 🔥 **Live split-screen Markdown Viewer & Editor** with instant preview, dark/light mode glows, buttery smooth animations, and full GitHub Flavored Markdown support for perfect docs.
 
-## ✨ Live Demo
-![MarkView App](public/screenshots/image.png)
+## ✨ About MarkView
+MarkView is a premium, real-time Markdown editor designed for developers and writers who value speed and aesthetics. It features a seamless split-screen interface that renders GitHub Flavored Markdown instantly as you type. Built with **Next.js 15** and **Tailwind CSS**, MarkView runs entirely on the client-side, ensuring lightning-fast performance and total privacy. With a polished dark mode, responsive design, and smooth animations, it provides a top-tier writing experience right in your browser.
 
 ## 🚀 Features
 
