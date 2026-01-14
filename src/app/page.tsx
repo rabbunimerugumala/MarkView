@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="flex flex-col h-screen">
       <header className="flex items-center justify-between px-6 py-4 border-b">
-        <h1 className="text-xl font-bold">MarkView</h1>
+        <h1 className="text-2xl font-bold tracking-tight font-[family-name:var(--font-outfit)]">MarkView</h1>
         <ThemeToggle />
       </header>
       <main className="flex-1 flex overflow-hidden">

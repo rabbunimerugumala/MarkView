@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+import { Outfit } from "next/font/google";
 import "./globals.css";
+
+const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 
 export const metadata: Metadata = {
   title: "MarkView",
@@ -13,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="antialiased bg-background text-foreground min-h-screen font-sans">
+      <body className={`${outfit.variable} antialiased bg-background text-foreground min-h-screen font-sans`}>
         {children}
       </body>
     </html>
